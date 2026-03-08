@@ -72,8 +72,6 @@ w - 2 (write)
 
 x - 1 (execute)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/d5c2a977-0568-4057-bf3c-541b481ed335/Untitled.png)
-
 **→ chmod 700 sgoinfre**
 
 # Comandos
@@ -206,8 +204,6 @@ secure_path=”/usr/local/sbin:/usr/local/bin”
 
 **nano /etc/login.defs // sudo chage -l *username***
 
-![Screen Shot 2024-04-05 at 4.08.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/e0d568eb-85de-46b5-937e-0007abbcfd91/1dfde1f0-db75-4d9b-b28c-fa24e4b3d009.png)
-
 apt install libpam-pwquality
 
 **nano /etc/pam.d/common-password**
@@ -325,10 +321,6 @@ Esta es la partición raíz del sistema. Contiene todos los archivos y directori
 
 - **Programas de Usuario**: Tradicionalmente contiene la mayoría de los programas y bibliotecas del sistema. En sistemas modernos, **`/usr`** puede ser parte de la partición raíz sin necesidad de separarlo, aunque en sistemas de gran tamaño o en servidores puede ser útil tenerlo en una partición separada para gestión de actualizaciones o para configuraciones de solo lectura.
 
-A conseguir:
-
-![Screen Shot 2024-04-05 at 11.21.18 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/86882b59-9bf1-46a7-8630-63b80b2ff691/Screen_Shot_2024-04-05_at_11.21.18_AM.png)
-
 Separadas las particiones /home, swap
 
 LVM → Logic Volume Manager
@@ -351,8 +343,6 @@ Partitioning method:
 Guided - use entire disk and set up encrypted LVM
 
 Cantidad de volumen empleada en la partición guiada: 12.4 GB (max)
-
-![Screen Shot 2024-04-01 at 3.03.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/3ca0e085-f756-47eb-a22d-178d71fb6c28/Screen_Shot_2024-04-01_at_3.03.47_PM.png)
 
 # Debian Archive Mirror
 
@@ -461,17 +451,11 @@ sudo service ssh status
 
 /etc/ssh/sshd_config
 
-![Screen Shot 2024-04-05 at 3.34.21 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/99b0ba15-ffdb-4965-ab19-6e354746ea3d/Screen_Shot_2024-04-05_at_3.34.21_PM.png)
-
 /etc/ssh/ssh_config
-
-![Screen Shot 2024-04-05 at 3.35.56 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/0c34d6e7-bdf2-419f-bdf9-74434c2dd883/Screen_Shot_2024-04-05_at_3.35.56_PM.png)
 
 ### Reiniciar para que se actualicen los cambios
 
 sudo service ssh restart
-
-![Screen Shot 2024-04-05 at 3.39.44 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/1da92ce5-80c8-41f6-b8fc-c088d3735178/Screen_Shot_2024-04-05_at_3.39.44_PM.png)
 
 ### Conectarse a la máquina virtual recién creada
 
@@ -483,8 +467,6 @@ The term localhost is usually used to refer to the local computer with the loopb
 
 *nano /etc/hosts*
 
-![Screen Shot 2024-04-14 at 12.27.13 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/4a5311b0-7285-426d-97d3-a70d4d2d0265/Screen_Shot_2024-04-14_at_12.27.13_PM.png)
-
 ### Desconectarse de localhost
 
 Desde terminal conectada:
@@ -495,8 +477,6 @@ Desde máquina virtual:
 
 - Ver quién está conectado con *who*
 
-![Screen Shot 2024-04-05 at 4.28.39 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/04b6086b-8272-4ccd-9214-fd4eb946ea69/Screen_Shot_2024-04-05_at_4.28.39_PM.png)
-
 - Identificar el PID de su shell con  *ps -ax \ grep pts/0*
     
     *ps* para ver la info de todos los procesos
@@ -504,15 +484,11 @@ Desde máquina virtual:
     ### **Opción ps -a**
     
     Esta opción permite obtener los procesos de todos los usuarios del sistema, pero hay que combinarlo con otras opciones como “x”. En caso contrario tan solo dará una breve información sobre los procesos del usuario que ha lanzado el comando y poco más
-    
-    ![Screen Shot 2024-04-05 at 4.30.14 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/e75eee88-b3ab-4731-887d-b2c4d27799fd/Screen_Shot_2024-04-05_at_4.30.14_PM.png)
-    
+       
 - Desconectar con *kill -9 PID*
     
     Sends a SIGKILL signal to a service, shutting it down immediately
-    
-    ![Screen Shot 2024-04-05 at 4.31.18 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/ee1cf3bf-65e4-4793-90a2-953e7e31e212/Screen_Shot_2024-04-05_at_4.31.18_PM.png)
-    
+        
 
 # Firewall UFW
 
@@ -536,13 +512,9 @@ sudo ufw allow 4242
 
 sudo ufw status
 
-![Screen Shot 2024-04-05 at 3.47.06 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/d6552111-bb02-4869-b52e-74c44ef3512f/Screen_Shot_2024-04-05_at_3.47.06_PM.png)
-
 ***sudo ufw allow 8080 // sudo ufw deny 8080 // sudo ufw delete allow 8080***
 
 # Script
-
-![Screen Shot 2024-04-07 at 7.15.09 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/b6a35527-db5a-44bc-a657-1b332b0040ad/Screen_Shot_2024-04-07_at_7.15.09_PM.png)
 
 Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hará la función de cada comando.
 
@@ -551,8 +523,6 @@ Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hará 
 **“La arquitectura de tu sistema operativo y su versión de kernel”**
 
 **uname -a (donde ‘-a’ = ‘—all’)**
-
-![Screen Shot 2024-04-07 at 6.13.04 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/a9ff19db-3df7-4887-991b-4ca15d570c0e/Screen_Shot_2024-04-07_at_6.13.04_PM.png)
 
 - INFO:
     
@@ -617,8 +587,6 @@ Es una secuencia de comandos guardada en un fichero que cuando se ejecuta hará 
     
     Buscar fichero */proc/cpuinfo* que proporciona info sobre el procesador
     
-    ![Screen Shot 2024-04-07 at 6.21.55 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/acc626bc-1f39-4333-ad95-834720663c3c/Screen_Shot_2024-04-07_at_6.21.55_PM.png)
-    
     - wc -l cuenta concretamente líneas. Cuando hay más de un núcleo muestra la información por separado, uno por línea. En este caso solo hay uno y empieza a contar desde 0.
     - grep busca una palabra
     - sort -u para incluir solo id únicas. Por si añades otro procesador virtualizado
@@ -640,8 +608,6 @@ Las comillas son necesarias porque hay un espacio entre las palabra. Quieres bus
 - INFO
     
     *free* muestra información sobre la RAM
-    
-    ![Screen Shot 2024-04-07 at 6.33.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/57de1fc1-8ec3-4a6a-994e-54b2b5d77365/Screen_Shot_2024-04-07_at_6.33.47_PM.png)
     
     —mega para mostrarlo en megabytes
     
@@ -679,13 +645,9 @@ Las comillas son necesarias porque hay un espacio entre las palabra. Quieres bus
     - Escoge la línea cuya primera palabra es “Mem” (*$1 == “Mem”)*
     - Imprime la memoria usada, tercera palabra de esa línea, (*print $3)*
     
-    ![Screen Shot 2024-04-07 at 6.49.35 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/3b0ca744-a41a-4b3d-808a-cd6972b8edc5/Screen_Shot_2024-04-07_at_6.49.35_PM.png)
-    
     Hacemos lo mismo para ver la memoria total (*print $2)*, necesaria para calcular el porcentaje
     
     **printf vs print in awk**
-    
-    ![Screen Shot 2024-04-07 at 6.53.21 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/aa891f6d-3c8a-44ed-9acd-964b66d0e6e3/Screen_Shot_2024-04-07_at_6.53.21_PM.png)
     
     > Use the print statement to produce output with simple, standardized formatting. You specify only the strings or numbers to print, in a list separated by commas. They are output, separated by single spaces, followed by a newline.
     > 
@@ -713,8 +675,6 @@ Las comillas son necesarias porque hay un espacio entre las palabra. Quieres bus
 - INFO
     
     *df* (”disk filesystem”) muestra un resumen completo del uso del espacio del disco
-    
-    ![Screen Shot 2024-04-07 at 7.01.36 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/af79260f-2bb7-4e61-970b-2cfa9fe14f31/Screen_Shot_2024-04-07_at_7.01.36_PM.png)
     
     De la imagen de arriba:
     
@@ -762,8 +722,6 @@ Las comillas son necesarias porque hay un espacio entre las palabra. Quieres bus
 - INFO
     
     *vmstat* muestra estadísticas del sistema, permitiendo obtener un detalle general de los procesos, uso de memoria, actividad de CPU, estado del sistema, etc. 
-    
-    ![Screen Shot 2024-04-07 at 7.32.15 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/ca227fbe-e3da-430e-af9c-20c709c09345/Screen_Shot_2024-04-07_at_7.32.15_PM.png)
     
     Quiero que me muestre cada segundo la info y escojo la última línea (*tail -1*)- De esta, imprimo la última palabra (*awk ‘{print $15}’)* que muestra el uso de memoria disponible
     
@@ -830,8 +788,6 @@ NOTA: Suele ser bajo pues Linux no consume mucha memoria.
     
     man who:
     
-    ![Screen Shot 2024-04-07 at 7.42.57 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/67fcb348-598c-4406-a557-e01e211c1044/Screen_Shot_2024-04-07_at_7.42.57_PM.png)
-    
     Para filtrar la información usamos *awk*
     
 
@@ -872,8 +828,6 @@ NOTA: Suele ser bajo pues Linux no consume mucha memoria.
     -a o —all → List all listening and non-listening connections with:
     
     -t o —tcp → TCP connections
-    
-    ![Screen Shot 2024-04-07 at 8.07.14 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/df1d8a37-8484-4f2c-a913-bef6d00f5a81/Screen_Shot_2024-04-07_at_8.07.14_PM.png)
     
 
 **ss -ta | grep ESTAB | wc -l**
@@ -925,11 +879,7 @@ NOTA: Suele ser bajo pues Linux no consume mucha memoria.
     
     *hostname -i (--ip-addresses)*
     
-    ![Screen Shot 2024-04-07 at 8.13.52 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/af31617a-050b-413a-b3e9-ab7d7e04d17e/Screen_Shot_2024-04-07_at_8.13.52_PM.png)
-    
     *ip link* para mostrar interfaces de red (dirección MAC)
-    
-    ![Screen Shot 2024-04-07 at 8.14.19 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/7bce1561-5c93-4f3e-97e7-02bf089fb6b7/Screen_Shot_2024-04-07_at_8.14.19_PM.png)
     
 
 **hostname -I**
@@ -946,11 +896,7 @@ NOTA: Suele ser bajo pues Linux no consume mucha memoria.
     
     *_COMM=sudo* para filtrar con solo los comando *sudo.* `_COMM` , ya que hace referencia a un script ejecutable.
     
-    ![Screen Shot 2024-04-07 at 8.19.14 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/2291bdb0-bf03-4f47-9c2c-4ecfce58fa55/Screen_Shot_2024-04-07_at_8.19.14_PM.png)
-    
     `grep COMMAND` pues también muestra cuando inicias o cierras sesión y asi solo aparecerán las líneas de comandos. Por último pondremos `wc -l` para que asi nos salgan enumeradas las líneas
-    
-    ![Screen Shot 2024-04-07 at 8.19.31 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0bdd19dc-786b-44f8-b15e-73b0b04eff47/0e981b5f-d4c5-48eb-acd6-bdcb113ea8b1/Screen_Shot_2024-04-07_at_8.19.31_PM.png)
     
 
 **journalctl _COMM=sudo | grep COMMAND | wc -l**
